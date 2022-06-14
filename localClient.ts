@@ -1,3 +1,4 @@
+import { existsSync } from 'fs'
 import { readFile, writeFile, rm } from 'fs/promises'
 
 class LocalClient {
@@ -20,7 +21,9 @@ class LocalClient {
   }
 
   deleteItem = async (url: string) => {
-    return rm(url)
+    if (existsSync(url)) {
+      return rm(url)
+    }
   }
 }
 
