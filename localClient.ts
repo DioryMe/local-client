@@ -1,5 +1,6 @@
-import { existsSync } from 'fs'
+import { existsSync, mkdirSync } from 'fs'
 import { readFile, writeFile, rm } from 'fs/promises'
+import { dirname } from 'path'
 
 class LocalClient {
   address: string | undefined
@@ -21,6 +22,10 @@ class LocalClient {
   }
 
   writeItem = async (url: string, fileContent: Buffer | string) => {
+    const folderPath = dirname(url)
+    if (!existsSync(folderPath)) {
+      mkdirSync(folderPath)
+    }
     return writeFile(url, fileContent)
   }
 
