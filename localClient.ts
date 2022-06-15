@@ -12,6 +12,10 @@ class LocalClient {
     return readFile(url, { encoding: 'utf8' })
   }
 
+  readItem = async (url: string) => {
+    return readFile(url)
+  }
+
   writeTextItem = async (url: string, fileContent: string) => {
     return this.writeItem(url, fileContent)
   }
