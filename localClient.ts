@@ -1,20 +1,25 @@
 import { existsSync, mkdirSync } from 'fs'
 import { readFile, writeFile, rm } from 'fs/promises'
 import { dirname } from 'path'
+import { join } from 'path'
 
 class LocalClient {
-  address: string | undefined
+  address: string
+  type: string
 
-  constructor(address?: string) {
+  constructor(address: string) {
     this.address = address
+    this.type = this.constructor.name
   }
 
   readTextItem = async (url: string) => {
-    return readFile(url, { encoding: 'utf8' })
+    const filePath = join(this.address, url)
+    return readFile(filePath, { encoding: 'utf8' })
   }
 
   readItem = async (url: string) => {
-    return readFile(url)
+    const filePath = join(this.address, url)
+    return readFile(filePath)
   }
 
   writeTextItem = async (url: string, fileContent: string) => {
@@ -22,11 +27,12 @@ class LocalClient {
   }
 
   writeItem = async (url: string, fileContent: Buffer | string) => {
-    const folderPath = dirname(url)
-    if (!existsSync(folderPath)) {
-      mkdirSync(folderPath)
+    const folderPath = join(this.address, url)
+    const folderName = dirname(folderPath)
+    if (!existsSync(folderName)) {
+      mkdirSync(folderName, { recursive: true })
     }
-    return writeFile(url, fileContent)
+    return writeFile(folderPath, fileContent)
   }
 
   deleteItem = async (url: string) => {
