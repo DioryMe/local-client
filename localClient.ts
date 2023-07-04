@@ -12,6 +12,13 @@ class LocalClient {
     this.type = this.constructor.name
   }
 
+  verify = async () => {
+    if (!existsSync(this.address)) {
+      throw new Error(`Address folder path doesn't exist: ${this.address}`)
+    }
+    return true
+  }
+
   readTextItem = async (url: string) => {
     const filePath = join(this.address, url)
     return readFile(filePath, { encoding: 'utf8' })
