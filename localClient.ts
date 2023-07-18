@@ -1,4 +1,4 @@
-import { existsSync, mkdirSync } from 'fs'
+import { existsSync, lstatSync, mkdirSync, readdirSync } from 'fs'
 import { readFile, writeFile, rm } from 'fs/promises'
 import { dirname } from 'path'
 import { join } from 'path'
@@ -17,6 +17,10 @@ class LocalClient {
       throw new Error(`Address folder path doesn't exist: ${this.address}`)
     }
     return true
+  }
+
+  exists = async (url: string) => {
+    return existsSync(join(this.address, url))
   }
 
   readTextItem = async (url: string) => {
@@ -46,6 +50,15 @@ class LocalClient {
     if (existsSync(url)) {
       return rm(url)
     }
+  }
+
+  list = async (url: string) => {
+    const filePath = join(this.address, url)
+    if (!(await this.exists(url)) || !lstatSync(filePath).isDirectory()) {
+      return []
+    }
+    const list = readdirSync(filePath)
+    return list
   }
 }
 
