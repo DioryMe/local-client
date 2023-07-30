@@ -47,8 +47,9 @@ class LocalClient {
   }
 
   deleteItem = async (url: string) => {
-    if (existsSync(url)) {
-      return rm(url)
+    const filePath = join(this.address, url)
+    if (existsSync(filePath)) {
+      return rm(filePath)
     }
   }
 
