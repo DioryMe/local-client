@@ -1,5 +1,5 @@
 import { existsSync, lstatSync, mkdirSync, readdirSync } from 'fs'
-import { readFile, writeFile, rm } from 'fs/promises'
+import { readFile, writeFile, rm, rmdir } from 'fs/promises'
 import { dirname } from 'path'
 import { join } from 'path'
 
@@ -50,6 +50,13 @@ class LocalClient {
     const filePath = join(this.address, url)
     if (existsSync(filePath)) {
       return rm(filePath)
+    }
+  }
+
+  deleteFolder = async (url: string) => {
+    const filePath = join(this.address, url)
+    if (existsSync(filePath)) {
+      return rm(filePath, { recursive: true })
     }
   }
 
