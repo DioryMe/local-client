@@ -1,9 +1,10 @@
-import { existsSync, lstatSync, mkdirSync, readdirSync } from 'fs'
+import { createReadStream, existsSync, lstatSync, mkdirSync, readdirSync } from 'fs'
 import { readFile, writeFile, rm, rmdir } from 'fs/promises'
 import { dirname } from 'path'
 import { join } from 'path'
+import { ConnectionClient } from '@diograph/diograph'
 
-class LocalClient {
+class LocalClient implements ConnectionClient {
   address: string
   type: string
 
@@ -33,8 +34,14 @@ class LocalClient {
     return readFile(filePath)
   }
 
+  readToStream = async (url: string) => {
+    const filePath = join(this.address, url)
+    return createReadStream(filePath)
+  }
+
   writeTextItem = async (url: string, fileContent: string) => {
-    return this.writeItem(url, fileContent)
+    await this.writeItem(url, fileContent)
+    return true
   }
 
   writeItem = async (url: string, fileContent: Buffer | string) => {
@@ -43,14 +50,16 @@ class LocalClient {
     if (!existsSync(folderName)) {
       mkdirSync(folderName, { recursive: true })
     }
-    return writeFile(folderPath, fileContent)
+    await writeFile(folderPath, fileContent)
+    return true
   }
 
   deleteItem = async (url: string) => {
     const filePath = join(this.address, url)
     if (existsSync(filePath)) {
-      return rm(filePath)
+      await rm(filePath)
     }
+    return true
   }
 
   deleteFolder = async (url: string) => {
