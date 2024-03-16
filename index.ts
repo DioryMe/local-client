@@ -1,3 +1,1 @@
-import { LocalClient } from './localClient'
-
-export { LocalClient }
+export { LocalClient } from './localClient'
