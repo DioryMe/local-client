@@ -2,7 +2,7 @@ import { createReadStream, existsSync, lstatSync, mkdirSync, readdirSync } from 
 import { readFile, writeFile, rm, rmdir } from 'fs/promises'
 import { dirname } from 'path'
 import { join } from 'path'
-import { ConnectionClient } from '@diograph/diograph'
+import { ConnectionClient } from '@diograph/diograph/types'
 
 class LocalClient implements ConnectionClient {
   address: string
