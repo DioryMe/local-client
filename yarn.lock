@@ -297,15 +297,19 @@
   resolved "https://registry.yarnpkg.com/@bcoe/v8-coverage/-/v8-coverage-0.2.3.tgz#75a2e8b51cb758a7553d6804a5932d7aace75c39"
   integrity sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==
 
-"@diograph/diograph@0.2.5-rc1":
-  version "0.2.5-rc1"
-  resolved "https://registry.yarnpkg.com/@diograph/diograph/-/diograph-0.2.5-rc1.tgz#a6f7231a3a0b3590284f899b1c0f20a8f11a09ed"
-  integrity sha512-ox4rblvy7aIhsYgU3Ig+B3W9Y7Ms7DhU/YMI6HrRK+mQjfka1XSuoQPdGTmhEU3CCZxuuqI/fqMTK/umljLlFA==
+"@diograph/diograph@0.3.0-rc14":
+  version "0.3.0-rc14"
+  resolved "https://registry.yarnpkg.com/@diograph/diograph/-/diograph-0.3.0-rc14.tgz#5ad19f36d1917a927bc575428fe3bb33f3618841"
+  integrity sha512-6L6DvTuDsrJF/jS+Z8vHVTjrY48AAgg9NrggEIKFz3Yxjh0IOiEl14GyY8bU5Pu1YOCAItgBnrGAjaR3kk23UA==
   dependencies:
-    "@types/path-browserify" "^1.0.0"
-    "@types/uuid" "8.3.2"
     ajv "^8.12.0"
-    path-browserify "^1.0.1"
+    uuid "^8.3.2"
+
+"@diory/diosphere-js@^0.2.6-rc2":
+  version "0.2.6-rc2"
+  resolved "https://registry.yarnpkg.com/@diory/diosphere-js/-/diosphere-js-0.2.6-rc2.tgz#dfe334927d231795dfdbd87f8a538b0ed50c03b5"
+  integrity sha512-NN7/TFkQcgF0UANcAkWjUtI9swX8LPwYVm6g4oDZ6Rib9dNCSBvAyjq8GJ/VMYPLyMaS3WZBgQZ5+EoLF9Xnjg==
+  dependencies:
     uuid "8.3.2"
 
 "@istanbuljs/load-nyc-config@^1.0.0":
@@ -641,7 +645,7 @@
   dependencies:
     undici-types "~5.26.4"
 
-"@types/path-browserify@^1.0.0":
+"@types/path-browserify@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@types/path-browserify/-/path-browserify-1.0.2.tgz#14b62d4371316016f254b9cca5c10e60ef33dcc0"
   integrity sha512-ZkC5IUqqIFPXx3ASTTybTzmQdwHwe2C0u3eL75ldQ6T9E9IWFJodn6hIfbZGab73DfyiHN4Xw15gNxUq2FbvBA==
@@ -650,11 +654,6 @@
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-2.0.3.tgz#6209321eb2c1712a7e7466422b8cb1fc0d9dd5d8"
   integrity sha512-9aEbYZ3TbYMznPdcdr3SmIrLXwC/AKZXQeCf9Pgao5CKb8CyHuEX5jzWPTkvregvhRJHcpRO6BFoGW9ycaOkYw==
-
-"@types/uuid@8.3.2":
-  version "8.3.2"
-  resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-8.3.2.tgz#b7077bdfc866dbb39939029774806f24e95be791"
-  integrity sha512-u40ViizKDmdl5FhOXn9WQbulpigYCaiD5hD4KqR3xyQww6l3+0ND+A9TeFla8tFpqvR+UAkJdYb/8jdaQG4/nw==
 
 "@types/yargs-parser@*":
   version "21.0.3"
@@ -1897,6 +1896,11 @@ pkg-dir@^4.2.0:
   dependencies:
     find-up "^4.0.0"
 
+prettier@^3.2.5:
+  version "3.2.5"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.2.5.tgz#e52bc3090586e824964a8813b09aba6233b28368"
+  integrity sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==
+
 pretty-format@^29.0.0, pretty-format@^29.7.0:
   version "29.7.0"
   resolved "https://registry.yarnpkg.com/pretty-format/-/pretty-format-29.7.0.tgz#ca42c758310f365bfa71a0bda0a807160b776812"
@@ -2169,7 +2173,7 @@ uri-js@^4.2.2:
   dependencies:
     punycode "^2.1.0"
 
-uuid@8.3.2:
+uuid@8.3.2, uuid@^8.3.2:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
   integrity sha512-+NYs2QeMWy+GWFOEm9xnn6HCDp0l7QBD7ml8zLUmJ+93Q5NF0NocErnwkTkXVFNiX3/fpC6afS8Dhb/gz7R7eg==

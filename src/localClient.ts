@@ -1,10 +1,11 @@
-import { createReadStream, existsSync, lstatSync, mkdirSync, readdirSync } from 'fs'
-import { readFile, writeFile, rm } from 'fs/promises'
-import { dirname } from 'path'
-import { join } from 'path'
+import { createReadStream, Dirent, existsSync, lstatSync, mkdirSync, readdirSync } from 'fs'
+import { readFile, writeFile, rm, readdir } from 'fs/promises'
+import { dirname, join } from 'path'
 import { ConnectionClient } from '@diograph/diograph/types'
 
 import { IDataClient } from './types'
+
+const isValidDirent = (dirent: Dirent) => !dirent.name.startsWith('.')
 
 class LocalClient implements IDataClient {
   type: string
@@ -61,6 +62,32 @@ class LocalClient implements IDataClient {
       return []
     }
     return readdirSync(url)
+  }
+
+  getFileNames = async (folderPath: string): Promise<string[]> => {
+    const folderExists = await this.exists(folderPath)
+    if (!folderExists) {
+      return []
+    }
+
+    const dirents: Dirent[] = await readdir(folderPath, { withFileTypes: true })
+    return dirents
+      .filter(isValidDirent)
+      .filter((dirent) => !dirent.isDirectory())
+      .map(({ name }) => name)
+  }
+
+  getFolderNames = async (folderPath: string): Promise<string[]> => {
+    const folderExists = await this.exists(folderPath)
+    if (!folderExists) {
+      return []
+    }
+
+    const dirents: Dirent[] = await readdir(folderPath, { withFileTypes: true })
+    return dirents
+      .filter(isValidDirent)
+      .filter((dirent) => dirent.isDirectory())
+      .map(({ name }) => name)
   }
 }
 
