@@ -1,8 +1,16 @@
-import { createReadStream, Dirent, existsSync, lstatSync, mkdirSync, readdirSync } from 'fs'
+import {
+  createReadStream,
+  Dirent,
+  existsSync,
+  lstatSync,
+  mkdirSync,
+  readdirSync,
+  statSync,
+} from 'fs'
 import { readFile, writeFile, rm, readdir } from 'fs/promises'
-import { dirname, join } from 'path'
+import { basename, dirname } from 'path'
 
-import { IDataClient } from './types'
+import { IDataClient, IMetadata } from './types'
 
 const isValidDirent = (dirent: Dirent) => !dirent.name.startsWith('.')
 
@@ -87,6 +95,15 @@ class LocalClient implements IDataClient {
       .filter(isValidDirent)
       .filter((dirent) => dirent.isDirectory())
       .map(({ name }) => name)
+  }
+
+  getMetadata = (url: string): IMetadata => {
+    const { birthtime, mtime } = statSync(url) || {}
+    return {
+      name: basename(url),
+      created: birthtime && birthtime.toISOString(),
+      modified: mtime && mtime.toISOString(),
+    }
   }
 }
 

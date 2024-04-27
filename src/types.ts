@@ -1,6 +1,12 @@
 import { IConnectionObject, IDiosphereObject } from '@diory/diosphere-js'
 import { IDiographObject } from '@diograph/diograph'
 
+export interface IMetadata {
+  name: string
+  created?: string
+  modified?: string
+}
+
 export interface IDataClient {
   type: string
   readTextItem(url: string): Promise<string>
@@ -14,6 +20,7 @@ export interface IDataClient {
   list(url: string): Promise<string[]>
   getFileNames(url: string): Promise<string[]>
   getFolderNames(url: string): Promise<string[]>
+  getMetadata(url: string): IMetadata
 }
 
 export interface IConnectionClient {
