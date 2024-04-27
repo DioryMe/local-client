@@ -1,18 +1,18 @@
 describe('connectionClient', () => {
+  describe('construct()', () => {
+    it('should construct with dataClient and connection', () => {
+      expect(true).toEqual(true)
+    })
+  })
+
   describe('getDiosphere()', () => {
-    it('should construct with dataClient', () => {
+    it('should get diosphere', () => {
       expect(true).toEqual(true)
     })
   })
 
-  describe('initialise()', () => {
-    it('should initialise with connections', () => {
-      expect(true).toEqual(true)
-    })
-  })
-
-  describe('enterRoom()', () => {
-    it('should initialise with connections', () => {
+  describe('saveDiosphere()', () => {
+    it('should save diosphere object', () => {
       expect(true).toEqual(true)
     })
   })

@@ -24,4 +24,5 @@ export interface IConnectionClient {
   saveDiosphere: (diosphereObject: IDiosphereObject) => void
   getDiograph: () => Promise<IDiographObject>
   saveDiograph: (diographObject: IDiographObject) => void
+  generateDiograph: () => Promise<IDiographObject>
 }
