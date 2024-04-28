@@ -7,6 +7,11 @@ export interface IMetadata {
   modified?: string
 }
 
+export interface IFileType {
+  ext?: string
+  mime?: string
+}
+
 export interface IDataClient {
   type: string
   readTextItem(url: string): Promise<string>
@@ -21,6 +26,7 @@ export interface IDataClient {
   getFileNames(url: string): Promise<string[]>
   getFolderNames(url: string): Promise<string[]>
   getMetadata(url: string): IMetadata
+  getFileType(url: string): Promise<IFileType>
 }
 
 export interface IConnectionClient {

@@ -1,6 +1,6 @@
 {
   "name": "@diograph/local-client",
-  "version": "0.3.0-rc2",
+  "version": "0.3.0-rc3",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "author": "Jouni Alanen <jouni@diory.me>, Olli-Pekka Pohjola <op@diory.me>",
@@ -12,7 +12,7 @@
     "@diograph/diograph": "0.3.0-rc14",
     "@diograph/folder-generator": "^0.2.0-rc1",
     "@diory/diosphere-js": "^0.2.6-rc2",
-    "file-type": "^19.0.0",
+    "file-type": "16.4.0",
     "path-browserify": "^1.0.1"
   },
   "devDependencies": {

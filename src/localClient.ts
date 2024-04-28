@@ -10,8 +10,9 @@ import {
 import { readFile, writeFile, rm, readdir } from 'fs/promises'
 import { basename, dirname, join } from 'path'
 import { ConnectionClient } from '@diograph/diograph/types'
+import { FileTypeResult, fromFile } from 'file-type'
 
-import { IDataClient, IMetadata } from './types'
+import { IDataClient, IFileType, IMetadata } from './types'
 
 const isValidDirent = (dirent: Dirent) => !dirent.name.startsWith('.')
 
@@ -105,6 +106,14 @@ class LocalClient implements IDataClient {
       created: birthtime && birthtime.toISOString(),
       modified: mtime && mtime.toISOString(),
     }
+  }
+
+  getFileType = async (url: string): Promise<IFileType> => {
+    const fileType: FileTypeResult | undefined = await fromFile(url)
+    return {
+      ext: fileType?.ext,
+      mime: fileType?.mime,
+    } as IFileType
   }
 }
 
