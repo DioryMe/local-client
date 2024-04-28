@@ -12,7 +12,7 @@ import { basename, dirname, join } from 'path'
 import { ConnectionClient } from '@diograph/diograph/types'
 import { FileTypeResult, fromFile } from 'file-type'
 
-import { IDataClient, IFileType, IMetadata } from './types'
+import { IDataClient, IFileType, IMetadata } from '@diory/client-js'
 
 const isValidDirent = (dirent: Dirent) => !dirent.name.startsWith('.')
 
