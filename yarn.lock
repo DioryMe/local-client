@@ -333,6 +333,36 @@
     sharp "0.31.2"
     uuid "^9.0.0"
 
+"@diograph/file-generator@^0.1.2-rc10":
+  version "0.1.2-rc10"
+  resolved "https://registry.yarnpkg.com/@diograph/file-generator/-/file-generator-0.1.2-rc10.tgz#ffd821702f0f4b4e936baaf1b0618e88c0913386"
+  integrity sha512-BAVKFwDpH0dNIJTIMbouXii2oNQf/hM3EpCfWmdTZBH5WYbhRW/oEPGXbHoo7+vZ1ZuSScGuD5G7PsE+iKuzpQ==
+  dependencies:
+    "@diograph/diograph" "0.3.0-rc11"
+    "@diograph/file-generator" "^0.1.2-rc9"
+    "@diograph/local-client" "^0.3.0-rc4"
+    "@types/path-browserify" "^1.0.2"
+    exifreader "^4.8.1"
+    multiformats "^9.6.0"
+    path-browserify "^1.0.1"
+    sharp "0.31.2"
+    uuid "^9.0.0"
+
+"@diograph/file-generator@^0.1.2-rc9":
+  version "0.1.2-rc9"
+  resolved "https://registry.yarnpkg.com/@diograph/file-generator/-/file-generator-0.1.2-rc9.tgz#d57739748187457777f5a278c4598590e5cda16f"
+  integrity sha512-wzOsoVEmV26RHVY1c3JucZm0XsgIn7cyU/mNFD1K0L60dtZjo2JByAHSJZItlNWfbukSem78yZUPTs6LqS4xCA==
+  dependencies:
+    "@diograph/diograph" "0.3.0-rc11"
+    "@diograph/local-client" "^0.3.0-rc3"
+    "@types/path-browserify" "^1.0.2"
+    exifreader "^4.8.1"
+    file-type "^16.4.0"
+    multiformats "^9.6.0"
+    path-browserify "^1.0.1"
+    sharp "0.31.2"
+    uuid "^9.0.0"
+
 "@diograph/folder-generator@^0.2.0-rc1":
   version "0.2.0-rc1"
   resolved "https://registry.yarnpkg.com/@diograph/folder-generator/-/folder-generator-0.2.0-rc1.tgz#4da93f3bca6789a90837af7fbc04899f8f4ab047"
@@ -342,7 +372,40 @@
     "@diograph/file-generator" "0.1.2-rc8"
     uuid "^8.3.2"
 
-"@diory/diosphere-js@^0.2.6-rc2":
+"@diograph/folder-generator@^0.3.0-rc1":
+  version "0.3.0-rc2"
+  resolved "https://registry.yarnpkg.com/@diograph/folder-generator/-/folder-generator-0.3.0-rc2.tgz#20e00a8d8a3adc94754d00f0b5c223d519ae3d2d"
+  integrity sha512-GJTlMMX9LJ6BNl+vCuaikq00SoGUr9ovvdTY5yJM/SPBZ3mU9tjMPls6CRiwZQnuHiXRnFawZq0+HJGs3iEsBw==
+  dependencies:
+    "@diograph/diograph" "0.3.0-rc12"
+    "@diograph/file-generator" "^0.1.2-rc10"
+    "@diograph/local-client" "^0.3.0-rc4"
+    path-browserify "^1.0.1"
+    uuid "^8.3.2"
+
+"@diograph/local-client@^0.3.0-rc3", "@diograph/local-client@^0.3.0-rc4":
+  version "0.3.0-rc4"
+  resolved "https://registry.yarnpkg.com/@diograph/local-client/-/local-client-0.3.0-rc4.tgz#7b1ac3f0a6e50152557e3b2e639da58110209f1f"
+  integrity sha512-FpavjGxkYn5+LWI0mF8O6MkWpI4sJ2guU5v6syi5bsqG3kafshh+29b0CdQ8KTVCbLauoGWH6qA/dq0GkWAD1w==
+  dependencies:
+    "@diograph/diograph" "0.3.0-rc14"
+    "@diograph/folder-generator" "^0.2.0-rc1"
+    "@diory/diosphere-js" "^0.2.6-rc2"
+    file-type "16.4.0"
+    path-browserify "^1.0.1"
+
+"@diory/client-js@^0.2.0-rc4":
+  version "0.2.0-rc4"
+  resolved "https://registry.yarnpkg.com/@diory/client-js/-/client-js-0.2.0-rc4.tgz#cd3c97abbf61c8fc0d920151119fa32c74273e3f"
+  integrity sha512-G4tfWDREzUEtS4CLXFyiRnq4ZVDuN4dgDNos4tUHQunl3zcPpUzZaNlq1YneQYDbk7TvxA97EFWlx5AG5XEdwg==
+  dependencies:
+    "@diograph/diograph" "0.3.0-rc14"
+    "@diograph/folder-generator" "^0.3.0-rc1"
+    "@diory/diosphere-js" "0.2.6-rc2"
+    path-browserify "^1.0.1"
+    uuid "8.3.2"
+
+"@diory/diosphere-js@0.2.6-rc2", "@diory/diosphere-js@^0.2.6-rc2":
   version "0.2.6-rc2"
   resolved "https://registry.yarnpkg.com/@diory/diosphere-js/-/diosphere-js-0.2.6-rc2.tgz#dfe334927d231795dfdbd87f8a538b0ed50c03b5"
   integrity sha512-NN7/TFkQcgF0UANcAkWjUtI9swX8LPwYVm6g4oDZ6Rib9dNCSBvAyjq8GJ/VMYPLyMaS3WZBgQZ5+EoLF9Xnjg==

@@ -11,7 +11,7 @@ import { readFile, writeFile, rm, readdir } from 'fs/promises'
 import { basename, dirname } from 'path'
 import { FileTypeResult, fromFile } from 'file-type'
 
-import { IDataClient, IFileType, IMetadata } from './types'
+import { IDataClient, IFileType, IMetadata } from '@diory/client-js'
 
 const isValidDirent = (dirent: Dirent) => !dirent.name.startsWith('.')
 
