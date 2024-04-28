@@ -9,9 +9,7 @@
     "dist"
   ],
   "dependencies": {
-    "@diograph/diograph": "0.3.0-rc14",
-    "@diograph/folder-generator": "^0.2.0-rc1",
-    "@diory/diosphere-js": "^0.2.6-rc2",
+    "@diory/client-js": "^0.2.0-rc4",
     "file-type": "16.4.0",
     "path-browserify": "^1.0.1"
   },
