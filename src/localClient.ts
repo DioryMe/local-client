@@ -12,6 +12,8 @@ import { basename, dirname } from 'path'
 import { FileTypeResult, fromFile } from 'file-type'
 
 import { IDataClient, IFileType, IMetadata } from '@diory/client-js'
+import { getThumbnailString } from './utils/getThumbnailString'
+import { getVideoMetadata } from './video/getVideoMetadata'
 
 const isValidDirent = (dirent: Dirent) => !dirent.name.startsWith('.')
 
@@ -113,6 +115,14 @@ class LocalClient implements IDataClient {
       ext: fileType?.ext,
       mime: fileType?.mime,
     } as IFileType
+  }
+
+  getThumbnail = async (imageUrl: string): Promise<string | undefined> => {
+    return getThumbnailString(imageUrl)
+  }
+
+  getVideoMetadata = async (videoUrl: string): Promise<IMetadata> => {
+    return getVideoMetadata(videoUrl)
   }
 }
 

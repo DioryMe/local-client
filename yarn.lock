@@ -394,10 +394,10 @@
     file-type "16.4.0"
     path-browserify "^1.0.1"
 
-"@diory/client-js@^0.2.0-rc4":
-  version "0.2.0-rc4"
-  resolved "https://registry.yarnpkg.com/@diory/client-js/-/client-js-0.2.0-rc4.tgz#cd3c97abbf61c8fc0d920151119fa32c74273e3f"
-  integrity sha512-G4tfWDREzUEtS4CLXFyiRnq4ZVDuN4dgDNos4tUHQunl3zcPpUzZaNlq1YneQYDbk7TvxA97EFWlx5AG5XEdwg==
+"@diory/client-js@^0.2.0-rc6":
+  version "0.2.0-rc6"
+  resolved "https://registry.yarnpkg.com/@diory/client-js/-/client-js-0.2.0-rc6.tgz#dd94e81adae2555fef6c63ba028e3f04cb8f3977"
+  integrity sha512-tepnP/sf7tYLCGur+ztqIXGME4PnVNVDcuNU5qCu00p+r+LvsBpwPsE9GHuhjFA6G7XwX9NiXznOsUxxUeJWAQ==
   dependencies:
     "@diograph/diograph" "0.3.0-rc14"
     "@diograph/folder-generator" "^0.3.0-rc1"
@@ -760,10 +760,22 @@
   resolved "https://registry.yarnpkg.com/@types/path-browserify/-/path-browserify-1.0.2.tgz#14b62d4371316016f254b9cca5c10e60ef33dcc0"
   integrity sha512-ZkC5IUqqIFPXx3ASTTybTzmQdwHwe2C0u3eL75ldQ6T9E9IWFJodn6hIfbZGab73DfyiHN4Xw15gNxUq2FbvBA==
 
+"@types/sharp@0.31.0":
+  version "0.31.0"
+  resolved "https://registry.yarnpkg.com/@types/sharp/-/sharp-0.31.0.tgz#c4af03a7e1d126f0d428a265e126fabd86ab6d0f"
+  integrity sha512-nwivOU101fYInCwdDcH/0/Ru6yIRXOpORx25ynEOc6/IakuCmjOAGpaO5VfUl4QkDtUC6hj+Z2eCQvgXOioknw==
+  dependencies:
+    "@types/node" "*"
+
 "@types/stack-utils@^2.0.0":
   version "2.0.3"
   resolved "https://registry.yarnpkg.com/@types/stack-utils/-/stack-utils-2.0.3.tgz#6209321eb2c1712a7e7466422b8cb1fc0d9dd5d8"
   integrity sha512-9aEbYZ3TbYMznPdcdr3SmIrLXwC/AKZXQeCf9Pgao5CKb8CyHuEX5jzWPTkvregvhRJHcpRO6BFoGW9ycaOkYw==
+
+"@types/uuid@^9.0.8":
+  version "9.0.8"
+  resolved "https://registry.yarnpkg.com/@types/uuid/-/uuid-9.0.8.tgz#7545ba4fc3c003d6c756f651f3bf163d8f0f29ba"
+  integrity sha512-jg+97EGIcY9AGHJJRaaPVgetKDsrTgbRjQ5Msgjh/DQKEFl0DtyRr/VCOyD1T2R1MNeWPK/u7JoGhlDZnKBAfA==
 
 "@types/yargs-parser@*":
   version "21.0.3"
