@@ -1,4 +1,4 @@
-import { LocalClient } from '@diograph/local-client'
+import { LocalClient } from '../localClient'
 
 export const mockDataClient = (name: string, created: string, modified: string) => {
   const client = new LocalClient()

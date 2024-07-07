@@ -9,7 +9,6 @@
     "dist"
   ],
   "dependencies": {
-    "@diory/client-js": "^0.2.0-rc6",
     "file-type": "16.4.0",
     "path-browserify": "^1.0.1",
     "sharp": "0.31.2"

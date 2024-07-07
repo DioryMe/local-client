@@ -4,7 +4,7 @@ import { getCreated } from './getCreated'
 import { getLatlng } from './getLatlng'
 import { getDuration } from './getDuration'
 import { getThumbnailString } from '../utils/getThumbnailString'
-import { IMetadata } from '@diory/client-js'
+import { IMetadata } from '../types'
 
 export async function getVideoMetadata(videoUrl: string): Promise<IMetadata> {
   try {
