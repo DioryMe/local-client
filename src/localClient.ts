@@ -12,7 +12,8 @@ import { basename, dirname, join } from 'path'
 import { ConnectionClient } from '@diograph/diograph/types'
 import { FileTypeResult, fromFile } from 'file-type'
 
-import { IDataClient, IFileType, IMetadata } from './types'
+import { IDataClient, IFileType, IMetadata } from '@diory/connection-client-js'
+
 import { getThumbnailString } from './utils/getThumbnailString'
 import { getVideoMetadata } from './video/getVideoMetadata'
 
