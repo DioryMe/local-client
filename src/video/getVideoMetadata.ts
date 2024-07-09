@@ -1,10 +1,11 @@
+import { IMetadata } from '@diory/connection-client-js'
+
+import { getThumbnailString } from '../utils/getThumbnailString'
 import { generateMetadata } from './utils/generateMetadata'
 
 import { getCreated } from './getCreated'
 import { getLatlng } from './getLatlng'
 import { getDuration } from './getDuration'
-import { getThumbnailString } from '../utils/getThumbnailString'
-import { IMetadata } from '../types'
 
 export async function getVideoMetadata(videoUrl: string): Promise<IMetadata> {
   try {

@@ -11,7 +11,8 @@ import { readFile, writeFile, rm, readdir } from 'fs/promises'
 import { basename, dirname } from 'path'
 import { FileTypeResult, fromFile } from 'file-type'
 
-import { IDataClient, IFileType, IMetadata } from './types'
+import { IDataClient, IFileType, IMetadata } from '@diory/connection-client-js'
+
 import { getThumbnailString } from './utils/getThumbnailString'
 import { getVideoMetadata } from './video/getVideoMetadata'
 
