@@ -1,4 +1,4 @@
-import { IMetadata } from '@diory/connection-client-js'
+import { IMetadata } from '@diory/types'
 
 import { getThumbnailString } from '../utils/getThumbnailString'
 import { generateMetadata } from './utils/generateMetadata'

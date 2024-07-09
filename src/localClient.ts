@@ -9,10 +9,9 @@ import {
 } from 'fs'
 import { readFile, writeFile, rm, readdir } from 'fs/promises'
 import { basename, dirname, join } from 'path'
-import { ConnectionClient } from '@diograph/diograph/types'
 import { FileTypeResult, fromFile } from 'file-type'
 
-import { IDataClient, IFileType, IMetadata } from '@diory/connection-client-js'
+import { IDataClient, IFileType, IMetadata } from '@diory/types'
 
 import { getThumbnailString } from './utils/getThumbnailString'
 import { getVideoMetadata } from './video/getVideoMetadata'
