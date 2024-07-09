@@ -1,6 +1,6 @@
 {
   "name": "@diograph/local-client",
-  "version": "0.4.0-rc1",
+  "version": "0.4.0-rc2",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "author": "Jouni Alanen <jouni@diory.me>, Olli-Pekka Pohjola <op@diory.me>",
